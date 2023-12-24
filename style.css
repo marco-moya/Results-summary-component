@@ -1,0 +1,219 @@
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --light-red-alfa: hsl(0, 100%, 67%, 0.05);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --orangey-yellow-alfa: hsl(39, 100%, 56%, 0.05);
+  --green-teal: hsl(166, 100%, 37%);
+  --green-teal-alfa: hsl(166, 100%, 37%, 0.05);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --cobalt-blue-alfa: hsl(234, 85%, 45%, 0.05);
+
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%)
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.card-container {
+  width: 100%;
+  max-width: 425px;
+  min-height: 450px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  background-color: var(--white);
+}
+
+.result-container {
+  width: 100%;
+  padding: 20px 20px;
+  background-image: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+  border-radius: 0 0 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-result {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--light-lavender);
+}
+
+.score-container {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 20px;
+  background-image: linear-gradient(var(--violet-blue), var(--persian-blue));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score {
+  font-size: 4.5rem;
+  font-weight: bolder;
+  color: var(--white);
+}
+
+.score-porcent {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: var(--light-slate-blue);
+}
+
+.message-congratulations {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.message-information {
+  width: 235px;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 10px;
+  color: var(--light-lavender);
+}
+
+.summary-container {
+  width: 100%;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.text-sumary {
+  padding-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  align-self: start;
+  color: rgb(50, 50, 50)
+}
+
+.skill-container {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-reaction {
+  background-color: var(--light-red-alfa);
+}
+.skill-memory {
+  background-color: var(--orangey-yellow-alfa);
+}
+.skill-verbal {
+  background-color: var(--green-teal-alfa);
+}
+.skill-visual {
+  background-color: var(--cobalt-blue-alfa);
+}
+
+.skill-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-reaction {
+  color: var(--light-red);
+}
+.text-memory {
+  color: var(--orangey-yellow);
+}
+.text-verbal {
+  color: var(--green-teal);
+}
+.text-visual {
+  color: var(--cobalt-blue);
+}
+
+.svg {
+  transform: scale(0.8);
+  margin-right: 10px;
+}
+
+.summary-porcent-container {
+  color: rgb(50, 50, 50);
+}
+
+.summary-porcent {
+  margin-left: 4px;
+  color: darkgray;
+}
+
+.button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  color: var(--white);
+  background-color: var(--dark-gray-blue);
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--light-royal-blue);
+}
+
+@media (min-width: 1440px){
+  html {
+    font-size: 80%;
+  }
+
+  .card-container {
+    max-width: 600px;
+    border-radius: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .result-container {
+    border-radius: 30px;
+  }
+
+  .score-container {
+    width: 180px;
+    height: 180px;
+  }
+}
